@@ -1,0 +1,46 @@
+
+
+// mixin
+// @mixin nameMixin () {}; đặc biến dùng nhiều
+// @include nameMixin ();  cách use
+
+@mixin bgc($bgcolor : red) { // red giá tri mặc định kho ko truyền vào
+    background-color: $bgcolor;
+}
+
+@mixin size($width, $height : $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absolute($direction: "left" ) {
+    position: absolute;
+
+    @if $direction == "left" {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if $direction == "top" {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @if $direction == "both" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// mixin responsive
+
+@mixin maxWidth($value) {
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}
+
+@mixin minWidth ($value) {
+    @media screen and (min-width: $value) {
+        @content;
+    }
+}

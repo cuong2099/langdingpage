@@ -1,0 +1,84 @@
+
+body {
+        line-height: 1;
+        color: $text-color;
+        font-family: $font;
+        font-weight: 400;
+        background-color: $white-color;
+}
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: $font;
+}
+
+.app {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 45px;
+    border-radius: 100rem;
+    font-family: $font;
+    line-height: 1;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+
+    &-primary {
+        font-weight: 700;
+        background-color: $primary-color;
+        color: $white-color;
+        box-shadow: 0 30px 54px -5px rgba(245, 56, 56, 0.35);
+
+    }
+
+    &-outline {
+        background-color: transparent;
+        color: $primary-color;
+        font-weight: 500;
+        border: 1px solid;
+    }
+
+    &-outline:hover {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+
+    &-rounded {
+        border-radius: 10px;
+        padding: 17px 65px;
+    }
+
+    
+}
+
+.boxed {
+    max-width: 555px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 739px) {
+    .boxed {
+        text-align: left;
+    }
+}
+

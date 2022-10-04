@@ -1,0 +1,46 @@
+.subcrible {
+  &-container {
+    background-color: $white-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 30px 114px 0 rgb(13 16 37 / 10%);
+    padding: 58px 70px;
+  }
+  
+  &-content {
+    max-width: 370px;
+    
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .subcrible {
+    transform: translateY(50%);
+  
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .customer .slick-track {
+    padding-bottom: 10px;
+}
+
+  .customer .slick-dots {
+    margin-bottom: 60px;
+    margin-left: 26px;
+}
+}
+
+@media screen and (max-width: 739px) {
+  .subcrible-container {
+    flex-direction: column;
+    padding: 30px;
+}
+}
+
+
+
+
