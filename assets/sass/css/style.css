@@ -101,16 +101,16 @@ button {
   align-items: center;
   gap: 0 30px;
 }
-.header-signin {
-  color: #0B132A;
-  font-weight: 500;
-}
 .header-signup {
   color: #F53838;
   font-weight: 500;
   padding: 13px 45px;
   border-radius: 100rem;
   border: 1px solid;
+}
+.header-signin {
+  color: #0B132A;
+  font-weight: 500;
 }
 
 @media (max-width: 568px) {
@@ -713,6 +713,224 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer {
     padding-top: 80px;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.modal-open {
+  display: flex;
+}
+.modal-container {
+  width: 600px;
+  max-width: calc(100% - 32px);
+  animation: modalFadeIn ease-in 0.3s;
+}
+.modal-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.modal-signup {
+  padding: 50px 60px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.modal-signin {
+  padding: 50px 60px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.modal-text-gray {
+  color: #242D3F;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.modal-item {
+  position: relative;
+}
+.modal-item p {
+  line-height: 1.6;
+}
+.modal-input {
+  height: 55px;
+  outline: none;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-bottom: 2px solid #F53838;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  background-color: #F5F5F5;
+  padding: 0 0 0 50px;
+  font-size: 18px;
+  width: calc(100% - 50px);
+}
+.modal-icon {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+}
+.modal-icon-show {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  cursor: default;
+}
+.modal-text-blue {
+  color: #40A9FF;
+}
+.modal-text-red {
+  color: #F53838;
+}
+.modal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+.js-modal-signin {
+  color: #0B132A;
+  font-weight: 500;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 568px) {
+  .modal-container {
+    max-width: 100%;
+  }
+  .modal-signup {
+    padding: 50px 35px;
+    border-radius: 0;
+    height: 650px;
+  }
+}
+.payment {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.payment-container {
+  background-color: #F53838;
+  width: 900px;
+  height: 650px;
+  max-width: calc(100% - 32px);
+}
+.payment-open {
+  display: flex;
+}
+.payment-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 50px;
+  margin-top: 50px;
+}
+.payment-heading {
+  margin-bottom: 30px;
+}
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+}
+.payment-input {
+  height: 40px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0 20px;
+}
+.payment-card-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  margin-bottom: 24px;
+}
+.payment-card-item {
+  width: 40px;
+  height: 40px;
+}
+.payment-place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 16px;
+}
+.payment-place-input {
+  max-width: 130px;
+  height: 40px;
+}
+.payment-btn {
+  width: 100%;
+  max-width: calc(100% - 120px);
+  margin-left: 60px;
+  height: 40px;
+  border: none;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+.payment-btn:hover {
+  background-color: #DDE0E4;
+}
+
+@media screen and (max-width: 1023px) {
+  .payment-item {
+    max-width: 283px;
+  }
+  .payment-place-input {
+    max-width: 90px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .payment-container {
+    max-width: 100%;
+    height: 100%;
+  }
+  .payment-address {
+    display: none;
+  }
+  .payment-btn {
+    width: 100%;
+    max-width: calc(100% - 129px);
+    margin-left: 65px;
   }
 }
 

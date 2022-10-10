@@ -1,0 +1,137 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: none;
+  
+  &-open {
+    display: flex;
+  }
+
+  &-container {
+    width: 600px;
+    max-width: calc(100% - 32px);
+    animation: modalFadeIn ease-in 0.3s;
+  }
+
+  
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+  &-signup {
+    padding: 50px 60px;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-signin {
+    padding: 50px 60px;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    display: none;
+
+  }
+  
+  &-text-gray {
+    color: #242D3F;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  &-item {
+    position: relative;
+    p {
+      line-height: 1.6;
+    }
+  }
+  &-input {
+    height: 55px;
+    outline: none;    
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-bottom: 2px solid $primary-color;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    background-color: #F5F5F5;
+    padding: 0 0 0 50px;
+    font-size: 18px;
+    width: calc(100% - 50px);
+  }
+
+  &-icon {
+    position: absolute;
+    left: 18px;
+    top: 20px;
+  }
+
+  &-icon-show {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    cursor: default;
+  }
+
+  &-text-blue {
+    color: #40A9FF;
+  }
+
+  &-text-red {
+    color: $primary-color;
+  }
+
+  &-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    position: relative;
+  }
+
+}
+
+.js-modal-signin {
+  color: $heading-color;
+  font-weight: 500;  
+}
+
+@keyframes modalFadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(-100px);
+  }to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .modal-container {
+    max-width: 100%;
+  }
+  .modal-signup {
+    padding: 50px 35px;
+    border-radius: 0;
+    height: 650px;
+  }
+}

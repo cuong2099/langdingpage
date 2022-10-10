@@ -10,7 +10,7 @@
         type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
       />
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
@@ -48,8 +48,65 @@
                     </ul>
                     <div class="menu-toggle"><img src="./assets/img/menu-bars.png" alt=""></div>
                     <div class="header-auth">
-                        <a href="#" class="header-signin">Sign In</a>
+                        <a href="#" class="js-modal-signin">Sign In</a>
                         <a href="#" class="button button-outline">Sign out</a>
+                    </div>
+                    <!-- modal -->
+                    <div class="modal">
+                        <!-- sign up -->
+                        <div class="modal-container">
+                            <div class="modal-signup">
+                                <div class="modal-content">
+                                    <div class="modal-logo">
+                                        <img srcset="./assets/img/Logo.png 2x" alt="logo">    
+                                    </div>
+                                    <div class="modal-item">
+                                        <input type="text" class="modal-input" placeholder="Name">
+                                        <img srcset="./assets/img/modal-user.svg" alt="" class="modal-icon">
+                                    </div> 
+                                    <div class="modal-item">
+                                        <input type="text" class="modal-input" placeholder="Email" required>
+                                        <img srcset="./assets/img/modal-email.svg" alt="" class="modal-icon">
+                                    </div>
+                                    <div class="modal-item">
+                                        <input type="password" class="modal-input" placeholder="Password" required>
+                                        <img srcset="./assets/img/modal-password.svg" alt="" class="modal-icon">
+                                        <a href="#"><img srcset="./assets/img/modal-password-show.svg" alt="" class="modal-icon-show"></a>
+                                    </div>
+                                    <div class="modal-item">
+                                        <input type="password" class="modal-input" placeholder="Confirm Password" required>
+                                        <img srcset="./assets/img/modal-password.svg" alt="" class="modal-icon">
+                                        <a href="#"><img srcset="./assets/img/modal-password-show.svg" alt="" class="modal-icon-show"></a>
+                                        <p>By signing up, You agree to our <a href="#" class="modal-text-blue"> Terms & Conditions</a></p>
+                                    </div>   
+                                    <div class="modal-btn">
+                                        <a href="#" class="button button-primary">Sign up</a>
+                                        <p>Already a member? Go to <a href="#" class="modal-text-red">Login</a></p>
+                                    </div>
+                                </div>                        
+                            </div>
+                            <!-- sign in -->
+                            <div class="modal-signin">
+                                <div class="modal-content">
+                                    <div class="modal-logo">
+                                        <img srcset="./assets/img/Logo.png 2x" alt="logo">    
+                                    </div>
+                                    <div class="modal-item">
+                                        <input type="text" class="modal-input" placeholder="Email" required>
+                                        <img srcset="./assets/img/modal-email.svg" alt="" class="modal-icon">
+                                    </div>
+                                    <div class="modal-item">
+                                        <input type="password" class="modal-input" placeholder="Password" required>
+                                        <img srcset="./assets/img/modal-password.svg" alt="" class="modal-icon">
+                                        <a href="#"><img srcset="./assets/img/modal-password-show.svg" alt="" class="modal-icon-show"></a>
+                                       <a href="#" class="modal-text-gray"> Forgot Password?</a>
+                                    </div>   
+                                    <div class="modal-btn">
+                                        <a href="#" class="button button-primary">Sign In</a>                                      
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +119,7 @@
                             <h1 class="hero-heading">
                                 Want anything to be easy with<strong> LaslesVPN.</strong>
                             </h1>
-                            <p class="text hero-desc">Provide a network for all your needs with ease and fun using <span class="text-medium">LaslesVPN</span> discover interesting features from us.</p>
+                            <p class="text hero-desc">Provide a network for all Your needs with ease and fun using <span class="text-medium">LaslesVPN</span> discover interesting features from us.</p>
                             <a href="#" class="button button-primary button-rounded">Get Started</a>
                         </div>
                         <div class="hero-img">
@@ -165,7 +222,7 @@
                                     </div>
                                 </div>
                                 <h4 class="plan-price">Free</h4>
-                                <a href="#" class="button button-outline">Select</a>
+                                <a href="#" class="button button-outline js-payment-plan">Select</a>
                             </div>  
                             <div class="plan-item">
                                 <div class="plan-image">
@@ -195,7 +252,7 @@
                                     </div>
                                 </div>
                                 <h4 class="plan-price">$9 / mo</h4>
-                                <a href="#" class="button button-outline">Select</a>
+                                <a href="#" class="button button-outline js-payment-plan">Select</a>
                             </div>  
                             <div class="plan-item is-active">
                                 <div class="plan-image">
@@ -225,9 +282,87 @@
                                     </div>
                                 </div>
                                 <h4 class="plan-price">$12 / mo</h4>
-                                <a href="#" class="button button-primary">Select</a>
+                                <a href="#" class="button button-primary js-payment-plan">Select</a>
                             </div>                          
-                        </div>                           
+                            <div class="payment">
+                                <div class="payment-container">
+                                    <div class="payment-content">
+                                        <div class="payment-item payment-address">
+                                            <h3 class="payment-heading">BILLING ADDRESS</h3>
+                                            <form class="payment-form">
+                                                <label for="name">Full Name :</label>
+                                                <input type="text" class="payment-input" id="name" placeholder="Your name">
+                                            </form>
+                                            <form class="payment-form">
+                                                <label for="emaill">Email :</label>
+                                                <input type="text" class="payment-input" id="emaill" placeholder="Your email">
+                                            </form>
+                                            <form class="payment-form">
+                                                <label for="address">Address :</label>
+                                                <input type="text" class="payment-input" id="address" placeholder="Your address">
+                                            </form>
+                                            <form class="payment-form">
+                                                <label for="city">City :</label>
+                                                <input type="text" class="payment-input" id="city" placeholder="Your city">
+                                            </form>
+                                            <div class="payment-place">
+                                                <form class="payment-form">
+                                                    <label for="state">State :</label>
+                                                    <input type="text" class="payment-input payment-place-input" id="state" >
+                                                </form>
+                                                <form class="payment-form">
+                                                    <label for="zipcode">Zipcode :</label>
+                                                    <input type="number" class="payment-input payment-place-input" id="zipcode" >
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="payment-item">
+                                            <h3 class="payment-heading">PAYMENT</h3>
+                                            <form class="payment-form">
+                                                <label >Accepted Cards :</label>
+                                                <ul class="payment-card-list">
+                                                    <li class="payment-card-item">
+                                                        <a href="#"><img src="./assets/img/payment-paypal.svg" alt=""></a>
+                                                    </li>
+                                                    <li class="payment-card-item">
+                                                        <a href="#"><img src="./assets/img/payment-google.svg" alt=""></a>
+                                                    </li>
+                                                    <li class="payment-card-item">
+                                                        <a href="#"><img srcset="./assets/img/payment-mastercard.svg 2x" alt=""></a>
+                                                    </li>
+                                                    <li class="payment-card-item">
+                                                        <a href="#"><img srcset="./assets/img/payment-payoneer.svg" alt=""></a>
+                                                    </li>
+                                                </ul>
+                                            </form>
+                                            <form class="payment-form">
+                                                <label for="namecard">Name On Cards :</label>
+                                                <input type="text" class="payment-input" id="namecard">
+                                            </form>
+                                            <form class="payment-form">
+                                                <label for="numbercard">Credit Card Number :</label>
+                                                <input type="number" class="payment-input" id="numbercard">
+                                            </form>
+                                            <form class="payment-form">
+                                                <label for="month">Exp Month :</label>
+                                                <input type="date" class="payment-input" id="month" >
+                                            </form>
+                                            <div class="payment-place">
+                                                <form class="payment-form">
+                                                    <label for="year">Exp Year :</label>
+                                                    <input type="number" class="payment-input payment-place-input" id="year">
+                                                </form>
+                                                <form class="payment-form">
+                                                    <label for="cvv">CVV :</label>
+                                                    <input type="number" class=" payment-input payment-place-input" id="cvv">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" value="Pay Now" class="payment-btn">                                
+                                </div>
+                            </div>                           
+                        </div>
                     </div>
                 </div>
             </section>
@@ -359,13 +494,13 @@
                         </a>
                         <p class="footer-desc text"><span class="text-medium">LaslesVPN</span> is a private virtual network that has unique features and has high security.</p>
                         <div class="social">
-                            <a href="#" class="social-item">
+                            <a href="#"  target="_blank  class="social-item">
                                 <img srcset="./assets/img/Facebook.png 2x" alt="">
                             </a>
-                            <a href="#" class="social-item">
+                            <a href="#"   target="_blank class="social-item">
                                 <img srcset="./assets/img/Instagram.png 2x" alt="">
                             </a>
-                            <a href="#" class="social-item">
+                            <a href="#"   target="_blank class="social-item">
                                 <img srcset="./assets/img/Twitter.png 2x" alt="">
                             </a>
                         </div>

@@ -1,0 +1,117 @@
+.payment {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+  &-container {
+    background-color:$primary-color;
+    width: 900px;
+    height: 650px;
+    max-width: calc(100% - 32px);
+  }
+
+  &-open {
+    display: flex;
+  }
+
+  
+  &-content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 50px;
+    margin-top: 50px;
+   
+  }
+
+  &-heading {
+    margin-bottom: 30px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+  }
+
+  &-input {
+    height: 40px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0 20px;
+  }
+
+
+
+  &-card-list{ 
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    margin-bottom: 24px;
+  }
+
+  &-card-item {
+    width: 40px;
+    height: 40px;
+   
+  }
+
+  &-place {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 16px;
+    &-input {
+      max-width: 130px;
+      height: 40px;
+      
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    max-width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 40px;
+    border: none;
+    background-color:$gray-light-color;
+    cursor: pointer;
+    &:hover {
+      background-color: $gray-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .payment-item {
+    max-width: 283px;
+}
+.payment-place-input {
+  max-width: 90px;
+}
+}
+@media screen and (max-width: 767px) {
+  .payment-container {
+    max-width: 100%;
+    height: 100%;
+  }
+  .payment-address {
+    display: none;
+  }
+  .payment-btn {
+    width: 100%;
+    max-width: calc(100% - 129px);
+    margin-left: 65px;
+  }
+
+}
+
+
+

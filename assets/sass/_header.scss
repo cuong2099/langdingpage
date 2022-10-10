@@ -12,10 +12,6 @@
         align-items: center;
         gap: 0 30px;
     }
-    &-signin {
-        color: $heading-color;
-        font-weight: 500;  
-    }
 
 
     &-signup {
@@ -26,9 +22,15 @@
         border: 1px solid;
     }
 
+    &-signin {
+        color: $heading-color;
+        font-weight: 500;  
+    }
     
    
 }
+
+
 
 
 

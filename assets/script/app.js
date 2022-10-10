@@ -46,4 +46,51 @@ window.addEventListener('click', function(e){
   }
 });
 
+const headerSign = document.querySelector(".header-signin");
+const signUp = document.querySelector(".js-modal-signin");
+const modal = document.querySelector(".modal");
+const modalClose = document.querySelector(".modal-container");
+const modalLogo = document.querySelector(".modal-logo");
 
+const openSign = "modal-open";
+signUp.addEventListener("click", function() {
+  modal.classList.add(openSign);
+});
+
+headerSign.addEventListener("click", function() {
+  modal.classList.add(openSign);
+});
+
+
+modal.addEventListener("click", function () {
+  modal.classList.remove(openSign);  
+});
+
+modalLogo.addEventListener("click", function (){
+  modal.classList.remove(openSign);  
+});
+
+modalClose.addEventListener("click", function (e) {
+  e.stopPropagation();
+});
+
+const buyBtns = document.querySelectorAll(".js-payment-plan");
+const payMent = document.querySelector(".payment");
+const payMentContainer = document.querySelector(".payment-container");
+
+function showPaymentBtn() {
+  payMent.classList.add("payment-open");
+}
+function hidePaymentBtn() {
+  payMent.classList.remove("payment-open");
+}
+
+for ( const buyBtn of buyBtns) {
+  buyBtn.addEventListener("click" , showPaymentBtn);
+}
+
+payMent.addEventListener("click", hidePaymentBtn);
+
+payMentContainer.addEventListener("click", function (e) {
+  e.stopPropagation();
+})
